@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+
+/* Cela permet d'importer du code. Ici on importe des polices de Google Fonts */
+
+body {
+  background-color: #f9f9fb;
+  font-family: Roboto;
+  background-repeat: no-repeat;
+  /*permet d'empêcher la répétition de l'arrière plan*/
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+body#ajout_eleve {
+  background-image: url("../assets/driving-lessons.jpg");
+  background-color: gray;
+}
+
+body#ajouter_theme {
+  background-image: url("../assets/cones-signalisation-voiture.jpeg");
+  background-color: gray;
+}
+
+body#calendrier {
+  background-image: url("../assets/calendrier.jpg");
+  background-color: gray;
+}
+
+body#ajouter_seance {
+  background-image: url("../assets/seance.jpg");
+  background-color: gray;
+}
+
+body#inscription {
+  background-image: url("../assets/inscription.jpg");
+  background-color: gray;
+}
+
+body#validation {
+  background-image: url("../assets/validation.jpg");
+  background-color: gray;
+}
+
+body#consulter {
+  background-image: url("../assets/consulter.jpg");
+  background-color: gray;
+}
+
+body#accueil {
+  background-image: url("../assets/embouteillage.jpg");
+  background-color: gray;
+}
+
+img.verif {
+  width: 30%;
+  height: auto;
+  /* règle la taille des images de résultat (validation ou échec de l'enregistrement) */
+}
+
+h2 {
+  font-size: 1.5vmax;
+  /* Les vh vw vmin et vmax sont d'autres types de tailles que px qui sont définis en fonction de la taille de la fenêtre disponible (vh pour la hauteur vw pour la hauteur et vmin vmax pour le min ou le max des 2 valeurs) */
+}
+
+.wrapper {
+  background: linear-gradient(#3a3c44, #461918);
+  /* créer un dégradé allant d'une couleur vers l'autre */
+  height: 100%;
+  width: 100%;
+  /* style de fond du menu */
+}
+
+.nav-bloc {
+  display: flex;
+  /* permet de rendre un élément flexible : capable de modifier ses dimensions afin de remplir l'espace disponible de son conteneur */
+  justify-content: center;
+  /* permet de faire en sorte que les éléments prennent tout l'espace disponible */
+  cursor: pointer;
+  /* permet de rendre le curseur comme si il y avait quelque chose de cliquable quand il survole la zone */
+  border-bottom: 0.1vh solid #f2f2f21e;
+  transition: all 1s ease-out;
+  /* type particulier de transition durant 1 seconde */
+}
+
+.nav-menu {
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  font-family: Kanit;
+}
+
+.nav-bloc:hover,
+.nav-bloc:focus {
+  background: rgb(24, 24, 24);
+  border-radius: 35px;
+  /* définit le rayant de courbure des bordures */
+}
+
+.nav-bloc a:hover {
+  color: #ffffff;
+}
+
+.nav-bloc a {
+  color: #adadad;
+  text-decoration: none;
+  /* enlève le soulignement du lien */
+  display: inline-block;
+  z-index: 1;
+  padding: 2.5vh 15vw;
+  font-weight: bold;
+  transition: all 0.1s ease-out;
+  font-size: 6vmin;
+}
+
+.titre-bloc h1 {
+  padding: 0;
+  font-size: 8vmin;
+  color: #f34e358d;
+  display: flex;
+  /* permet de rendre un Ã©lÃ©ment flexible : capable de modifier ses dimensions afin de remplir l'espace disponible de son conteneur */
+  justify-content: center;
+  font-style: italic;
+  /* permet de faire en sorte que les Ã©lÃ©ments prennent tout l'espace disponible */
+
+}
+
+.menu-bloc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+  width: 100%;
+  padding: 2vh 0;
+  padding-bottom: 0.5vh;
+  /* espace à l'intérieur du contenant entre les bords et le contenu  */
+}
+
+.menu-bloc a {
+  color: #adadad;
+  font-weight: bolder;
+  font-size: 12vmin;
+  font-style: italic;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+  border-bottom: 0.3vh solid #f2f2f21e;
+  padding-bottom: 0.3vh;
+}
+
+.menu-bloc span {
+  color: #f34f35;
+}
+
+.menu-bloc a:hover {
+  background: rgb(37, 35, 35);
+  border: 0.2vh solid rgb(37, 35, 35);
+  color: rgb(255, 255, 255);
+  border-radius: 30px;
+  padding: 1vmax;
+}
+
+section#ajouter_eleve {
+  padding: 50px 15px;
+  margin-top: 4vh;
+}
+
+section#ajouter_eleve .container {
+  max-width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  /* espace à l'extérieur */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255, 0.6);
+  padding: 3vh 2vw;
+  border-radius: 15px;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0px 10px 50px -10px #d6d6d6;
+}
+
+section#ajouter_eleve .container a {
+  position: relative;
+  text-decoration: none;
+  font-size: 1vmax;
+  color: #242222;
+  font-weight: bold;
+}
+
+section#ajouter_eleve .container a::after {
+  content: "";
+  bottom: -3px;
+  width: 0;
+  right: 0;
+  position: absolute;
+  height: 2px;
+  background: #751816;
+  transition: 0.4s width;
+}
+
+section#ajouter_eleve .container a:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+/* le after permet de placer du contenu, ici aucun caractère : "", à la suite de l'élement concerné. Initialement ce contenu n'a pas de taille et est invisible puis en passant la souris dessus il augmente de largeur ce qui créer l'animation */
+section#ajouter_eleve .container .title {
+  font-size: 2vmax;
+  text-align: center;
+  color: #2a2a2a;
+}
+
+section#ajouter_eleve .container form {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  align-items: center;
+}
+
+section#ajouter_eleve .container form input {
+  width: 20vw;
+  height: auto;
+  margin: 1.5vh 0vh;
+  padding: 1.5vh;
+  border: none;
+  outline: none;
+  border: 0.1em solid #e4e4ec;
+  border-radius: 40px;
+  transition: 0.5s;
+  font-size: 1.5vmin;
+}
+
+section#ajouter_eleve .container form .effectif input {
+
+  height: auto;
+  margin: 1.5vh 0vh;
+  padding: 1.5vh;
+  padding-left: 2.5vh;
+  border: none;
+  text-align: center;
+  outline: none;
+  border: 0.1em solid #e4e4ec;
+  border-radius: 40px;
+  transition: 0.5s;
+  font-size: 1.5vmin;
+}
+
+section#ajouter_eleve .container form div input {
+  width: 4vw;
+  height: auto;
+  margin: 1.5vh 0vh;
+  padding: 1.5vh;
+  border: none;
+  outline: none;
+  border: 0.1em solid #e4e4ec;
+  border-radius: 40px;
+  transition: 0.5s;
+  font-size: 1.5vmin;
+}
+
+section#ajouter_eleve .container form select {
+  width: 22vw;
+  height: auto;
+  margin: 1.5vh 0vh;
+  padding: 1.5vh;
+  border: none;
+  border: 0.1em solid #e4e4ec;
+  border-radius: 40px;
+  transition: 0.5s;
+  font-size: 1.5vmin;
+}
+
+section#ajouter_eleve .container form textarea {
+  width: 20vw;
+  height: 8vh;
+  margin: 1.5vh 0vh;
+  padding: 1.5vh 2.5vh;
+  border: none;
+  outline: none;
+  border: 0.1em solid #e4e4ec;
+  border-radius: 40px;
+  transition: 0.5s;
+  font-size: 1.5vmin;
+  resize: none;
+  /* empêche la modification de la taille du textarea */
+}
+
+section#ajouter_eleve .container_menu {
+  max-width: 75%;
+  height: 100%;
+  margin: 0 auto;
+  color: #c5c5dc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(40px);
+  /* créer un flou avec les éléments derrières */
+  background-color: rgb(252 248 248 / 25%);
+  padding: 3vh 0.7vw;
+  border-radius: 40px;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 50px -10px #323232;
+
+
+}
+
+section#ajouter_eleve .container_menu h2 {
+  color: #cc3a41;
+  font-family: Work Sans;
+  font-size: 2.4vmax;
+
+}
+
+section#ajouter_eleve .container_menu .title span {
+  border-bottom: 1px solid rgb(179, 0, 0);
+}
+
+section#ajouter_eleve .container_menu .title {
+  font-size: 2.2vmax;
+  text-align: center;
+  color: #271c16;
+  font-family: Dancing Script;
+  padding: 1vmin;
+
+}
+
+section#ajouter_eleve .container_menu ul {
+  font-size: 1.5vmax;
+
+}
+
+section#ajouter_eleve .container_menu p {
+  padding: 0 10vmin;
+  text-align: justify;
+  /* justifie le texte */
+  font-size: 1.5vmax;
+}
+
+section#ajouter_eleve .container form textarea:hover {
+  border: 0.1em solid rgb(126, 125, 125);
+  transition: 0.25s;
+}
+
+section#ajouter_eleve .container form textarea::-webkit-scrollbar {
+  display: none;
+}
+
+section#ajouter_eleve .container form input:required:hover {
+  border-color: #02fa23;
+  transition: 0.25s;
+}
+
+section#ajouter_eleve .container form input:required:invalid:hover {
+  border-color: #ff0000;
+  transition: 0.25s;
+}
+
+
+section#ajouter_eleve .container form input:required {
+  border: 0.1em solid rgba(126, 125, 125, 0.3);
+  transition: 0.25s;
+}
+
+section#ajouter_eleve .container form input:required:invalid {
+  border: 0.1em solid;
+  border-color: rgba(255, 0, 0, 0.3);
+  transition: 0.25s;
+}
+
+section#ajouter_eleve .container form label {
+  margin: 0.5vh 0;
+  padding: 1vh 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1vmax;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+section#ajouter_eleve .container form label p#sous_titre {
+  margin: 0.5vh 0;
+  text-align: center;
+  font-size: 0.9vmax;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+section#ajouter_eleve .container form .boutton {
+  width: 11vw;
+  height: 7vh;
+  border-radius: 60px;
+  border: none;
+  background: linear-gradient(#1e1f23, #461918);
+  color: white;
+  font-weight: bold;
+  font-size: 2vmin;
+  cursor: pointer;
+  outline: none;
+  margin: 5vh;
+  text-align: center;
+}
+
+section#ajouter_eleve .container form .boutton:hover {
+  transform: translateY(-10px);
+  /* animation de déplacement vers le haut de l'objet (0.2s) */
+  transition: 0.2s;
+  box-shadow: 0px 10px 40px 0px #868585;
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 0.9vmax;
+  min-width: 400px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #6d3635;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 0.8vmax 0.9vmax;
+}
+
+.content-table td.date_calendrier {
+  text-align: center;
+  font-weight: 900;
+  color: black;
+  font-size: 1vmax;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+  background-color: #ffffff;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+  font-weight: bold;
+  color: #6d3635;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #6d3635;
+}
+
+/* Crédit : Alexis Deseure NF92 */

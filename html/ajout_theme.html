@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ajouter un thème</title>
+  <link rel="stylesheet" href="../css/Stylesheet.css">
+</head>
+
+<body id="ajouter_theme">
+
+  <section id="ajouter_eleve">
+    <div class="container">
+      <div class="title">
+        <h1>Ajouter un thème</h1>
+      </div>
+      <form action="../php/ajouter_theme.php" method="POST">
+        <label for="nom">Titre</label>
+        <input type="text" id="nom" required placeholder="Entrez le titre..."
+          pattern="[a-zA-Z0-9[À-ÖØ-öø-ÿ-\x20',)(]{2,30}" name="nom">
+        <!-- L'attribut pattern permet à l'aide d'une expression régulière (regex) de restreindre directement dans le input l'utilisation de certains caractères. Placeholder sert à placer un texte qui disparaîtra dès qu'un caractère sera inséré dans le input par un utilisateur. -->
+        <label for="descriptif">Descriptif</label>
+        <textarea rows='5' type=" text" id="descriptif" placeholder="Entrez une description ..."
+          name="descriptif"></textarea>
+        <input class="boutton" type="submit" value='Valider'>
+        <a href="../php/suppression_theme.php">Supprimer un thème</a>
+      </form>
+    </div>
+  </section>
+</body>
+
+</html>

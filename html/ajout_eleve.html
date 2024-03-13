@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ajouter un élève</title>
+  <link rel="stylesheet" href="../css/Stylesheet.css">
+</head>
+
+<body id="ajout_eleve">
+
+  <section id="ajouter_eleve">
+    <div class="container">
+      <div class="title">
+        <h1>Ajouter un élève</h1>
+      </div>
+      <form action="../php/ajouter_eleve.php" method="POST">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" required placeholder="Entrez votre nom ..." pattern="[a-zA-Z[À-ÖØ-öø-ÿ-\x20]{2,30}"
+          name="nom">
+        <!-- L'attribut pattern permet à l'aide d'une expression régulière (regex) de restreindre directement dans le input l'utilisation de certains caractères. Placeholder sert à placer un texte qui disparaîtra dès qu'un caractère sera inséré dans le input par un utilisateur. -->
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" required placeholder="Entrez votre prénom ..."
+          pattern="[a-zA-Z[À-ÖØ-öø-ÿ-\x20]{2,30}" name="prenom">
+        <label for="date">Date de naissance</label>
+        <input required id="date" type="date" name="date" value="2022-01-01" min="1909-05-27" max="2030-01-01">
+        <input class="boutton" type="submit" value='Inscrire'>
+      </form>
+    </div>
+  </section>
+</body>
+
+</html>
